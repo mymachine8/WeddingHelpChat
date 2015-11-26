@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="css/styles.css"><link>
+  </head>
+  <body>
+<div class="container">
+<div class="row" style="margin-top:100px">
+<div class="col-lg-6 col-md-7 col-sm-9 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
+
+  <h4 style="border-bottom: 1px solid #c5c5c5;text-align: center;">
+    <i class="glyphicon glyphicon-home">
+    </i>
+    Happy Home
+  </h4>
+  <div><span style="color:red;display:<%= display%>"> Username/password is incorrect </span><div>
+  <div style="padding: 10px;" id="logindiv">
+  <form accept-charset="UTF-8" role="form" id="form-login" method="post" action="./loginauth">
+      <fieldset>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            @
+          </span>
+          <input class="form-control" placeholder="Email" name="email" type="email" required="" autofocus="">
+        </div>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-lock">
+            </i>
+          </span>
+          <input class="form-control" placeholder="Password" id ="loginpassword" name="password" type="password" value="" required="">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">
+            Login
+          </button>
+          <p class="help-block">
+            <a class="pull-right text-muted" href="#" id="signuplink"><small>New User? Register!</small></a>
+
+          </p>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+<div style="display: none;" id="signupdiv">
+    <form accept-charset="UTF-8" role="form" id="form-signup" method="post" action="./createUser">
+      <fieldset>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            @
+          </span>
+          <input class="form-control" placeholder="Name" name="username" type="text" required="" autofocus="">
+        </div>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            @
+          </span>
+          <input class="form-control" placeholder="Email" name="email" type="email" required="">
+        </div>
+
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-lock">
+            </i>
+          </span>
+          <input class="form-control" placeholder="Password" name="password" type="password" required="">
+        </div>
+        <div class="form-group input-group">
+          <span class="input-group-addon">
+            <i class="glyphicon glyphicon-lock">
+            </i>
+          </span>
+          <input class="form-control" placeholder="Repeat Password" name="password_2" type="password" required="">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" id="signup">
+          Sign Up
+        </button>
+        <p class="help-block">
+          <a class="text-muted pull-right" href="#" id="loginlink"><small>Already a member? login</small></a>
+        </p>
+      </fieldset>
+    </form>
+  </div>
+</div>
+</div>
+</div>
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
